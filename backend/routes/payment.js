@@ -8,8 +8,8 @@ import pool from '../database/db.js';
 const router = express.Router();
 
 const razorpayInstance = new Razorpay({
-  key_id: process.env.RAZORPAY_KEY_ID || 'rzp_live_C6FfvKTgOoCJpN',
-  key_secret: process.env.RAZORPAY_SECRET || 'MNoMcQHWywgijXXy0tlrQvBh',
+  key_id: process.env.RAZORPAY_KEY_ID,
+  key_secret: process.env.RAZORPAY_SECRET,
 });
 router.post('/order', (req, res) => {
   const { amount } = req.body;
